@@ -1,0 +1,21 @@
+name: first-workflow
+
+on: push
+    
+  
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Print build
+          run: echo 'build'
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: print test
+        run: echo 'test'
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: print test
+        run: echo 'test'
