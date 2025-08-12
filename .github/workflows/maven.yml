@@ -18,6 +18,16 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Build with maven
+      run: mvn clean package
+    - run: mkdir stagging && cp target/*.jar stagging
+    - name: upload artifact
+      uses: actions/upload artifact@v4
+      with:
+        name: Package
+        path: stagging
+      
+        
         
 
   
